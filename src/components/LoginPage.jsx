@@ -48,6 +48,7 @@ const LoginPage = () => {
             </Form.Group>
         </ListGroup.Item>
         <ListGroup.Item className="mb-3 d-flex justify-content-end">
+                <Button variant="link" type="submit" href="registro.html">Quiere Registrarse?</Button>
                 <Button variant="primary" type="submit">Login</Button>
         </ListGroup.Item>
         </ListGroup>

@@ -11,7 +11,7 @@ const App = () => {
       <Navbar />
       {/* <Home /> */}
       {/* <LoginPage /> */}
-      <LoginPage />
+      <RegisterPage />
       <Footer />
     </div>
   );
