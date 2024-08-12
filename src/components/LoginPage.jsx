@@ -6,26 +6,26 @@ import Alert from "react-bootstrap/Alert";
 import { useState } from "react";
 
 const LoginPage = () => {
-    const [email, setEmail] = useState("");
-    const [password, setPassword] = useState("");
-    const [message, setMessage] = useState("");
-    const [variant, setVariant] = useState("success");
+    const [emailLogin, setEmailLogin] = useState("");
+    const [passwordLogin, setPasswordLogin] = useState("");
+    const [messageLogin, setMessageLogin] = useState("");
+    const [variantLogin, setVariantLogin] = useState("success");
 
     const validarFormulario = (e) => {
         e.preventDefault();
     
-        if (email === "" || password === "") {
-          setMessage("Debe Completar ambos campos");
-          setVariant("danger");
+        if (emailLogin === "" || passwordLogin === "") {
+          setMessageLogin("Debe Completar ambos campos");
+          setVariantLogin("danger");
           return false;
         }
-        if (password.length < 6) {
-          setMessage("El tamaño del password debe tener 6 caracteres o más");
-          setVariant("danger");
+        if (passwordLogin.length < 6) {
+          setMessageLogin("El tamaño del password debe tener 6 caracteres o más");
+          setVariantLogin("danger");
           return false;
         }
-        setMessage("Login Exitoso");
-        setVariant("success");
+        setMessageLogin("Login Exitoso");
+        setVariantLogin("success");
       };
 
   return (
@@ -38,25 +38,24 @@ const LoginPage = () => {
         <ListGroup.Item>
             <Form.Group className="mb-3" controlId="formBasicEmail">
                 <Form.Label>Email</Form.Label>
-                <Form.Control placeholder="Enter email" value={email} onChange={(e) => setEmail(e.target.value)} />
+                <Form.Control placeholder="Enter email" value={emailLogin} onChange={(e) => setEmailLogin(e.target.value)} />
             </Form.Group>
         </ListGroup.Item>
         <ListGroup.Item>
             <Form.Group className="mb-3" controlId="formBasicPassword">
                 <Form.Label>Password</Form.Label>
-                <Form.Control type="password" placeholder="Password" value={password} onChange={(e) => setPassword(e.target.value)} />
+                <Form.Control type="password" placeholder="Password" value={passwordLogin} onChange={(e) => setPasswordLogin(e.target.value)} />
             </Form.Group>
         </ListGroup.Item>
         <ListGroup.Item className="mb-3 d-flex justify-content-end">
-                <Button variant="link" type="submit" href="registro.html">Quiere Registrarse?</Button>
                 <Button variant="primary" type="submit">Login</Button>
         </ListGroup.Item>
         </ListGroup>
     </Form>
         <ListGroup.Item>
-        {message && (
-        <Alert variant={variant} onClose={() => setMessage("")} dismissible>
-          {message}
+        {messageLogin && (
+        <Alert variant={variantLogin} onClose={() => setMessageLogin("")} dismissible>
+          {messageLogin}
         </Alert>
       )}
         </ListGroup.Item>

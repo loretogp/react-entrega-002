@@ -10,8 +10,10 @@ const App = () => {
     <div>
       <Navbar />
       {/* <Home /> */}
-      {/* <LoginPage /> */}
+      <div class="formularios">
       <LoginPage />
+      <RegisterPage />
+      </div>
       <Footer />
     </div>
   );

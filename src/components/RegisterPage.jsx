@@ -60,7 +60,6 @@ const RegisterPage = () => {
             </Form.Group>
         </ListGroup.Item>
         <ListGroup.Item className="mb-3 d-flex justify-content-end">
-                <Button variant="link" type="submit" href="index.html">Ya esta registrado?</Button>
                 <Button variant="primary" type="submit">Login</Button>
         </ListGroup.Item>
         </ListGroup>
